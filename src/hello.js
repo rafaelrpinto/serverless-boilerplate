@@ -1,6 +1,10 @@
-const hello = async (event, context, cb) => {
+// @flow
+
+const hello = async (event: Object, contextevent: Object, cb: Function) => {
   cb(null, {
-    body: 'Go Serverless Webpack (Babel) v1.0! Your function executed successfully!',
+    body: {
+      message: 'The boilerplate is working!',
+    },
     event,
   });
 };

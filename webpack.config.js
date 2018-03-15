@@ -4,14 +4,14 @@ const slsw = require('serverless-webpack');
 
 module.exports = {
   entry: slsw.lib.entries,
+  mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
   target: 'node',
   devtool: 'source-map',
   externals: [nodeExternals()],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        include: __dirname,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
