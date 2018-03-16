@@ -1,24 +1,21 @@
 {
   "name": "boilerplate-service",
   "version": "1.0.0",
-  "description": "Minimal boilerplate for Node.js serverless functions using Babel, Flow, Webpack 4, Yarn, Serverless Offline and AirBNB linting.",
+  "description":
+    "Minimal boilerplate for Node.js serverless functions using Babel, Flow, Webpack 4, Yarn, Serverless Offline and AirBNB linting.",
   "author": "Rafael Pinto (meuemail@posteo.pt)",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rafaelrpinto/serverless-boilerplate.git"
   },
-  "keywords": [
-    "serverless",
-    "nodejs",
-    "webpack",
-    "babel",
-    "aws-lambda"
-  ],
+  "keywords": ["serverless", "nodejs", "webpack", "babel", "aws-lambda"],
   "scripts": {
     "start": "rm -rf .webpack && serverless offline start",
-    "deploy": "rm -rf .webpack && NODE_ENV=production && serverless deploy --aws-profile $AWS_PROFILE --region $AWS_REGION",
-    "remove": "rm -rf .webpack && NODE_ENV=production && serverless remove --aws-profile $AWS_PROFILE --region $AWS_REGION"
+    "deploy":
+      "rm -rf .webpack && NODE_ENV=production && serverless deploy --aws-profile $AWS_PROFILE --region $AWS_REGION",
+    "remove":
+      "rm -rf .webpack && NODE_ENV=production && serverless remove --aws-profile $AWS_PROFILE --region $AWS_REGION"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -26,10 +23,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-source-map-support": "^2.0.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-latest": "^6.24.1",
     "babel-preset-minify": "^0.3.0",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.18.2",
