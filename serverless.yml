@@ -20,4 +20,4 @@ functions:
 custom:
   webpack:
     webpackConfig: webpack.config.js
-    packager: 'yarn'
+    includeModules: true
