@@ -4,7 +4,7 @@ Minimal boilerplate for Node.js serverless functions using Babel, Flow, Webpack 
 
 ### Requirements
 
-* You need Node.js version >= 6.11 (Webpack 4 requirement). Since AWS Lambda only suports upt to v6.10.3 we use `babel-preset-env` to target node 6.10
+* You need Node.js version >= 6.11 (Webpack 4 requirement). Since AWS Lambda only suports up to v6.10.3 we use `babel-preset-env` to target node 6.10
 
 ### Running locally
 
