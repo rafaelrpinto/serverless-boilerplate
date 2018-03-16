@@ -1,5 +1,6 @@
 {
   "presets": [
+    ["flow"],
     ["minify"],
     [
       "env",
@@ -11,9 +12,5 @@
       }
     ]
   ],
-  "plugins": [
-    "source-map-support",
-    ["transform-object-rest-spread", { "useBuiltIns": true }],
-    "transform-flow-strip-types"
-  ]
+  "plugins": ["source-map-support", ["transform-object-rest-spread", { "useBuiltIns": true }]]
 }
