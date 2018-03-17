@@ -1,4 +1,7 @@
-# serverless-boilerplate
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)  [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+
+
+### Overview
 
 Starter boilerplate for Node.js serverless functions with:
 
