@@ -1,5 +1,6 @@
 {
   "presets": [
+    ["flow"],
     [
       "env",
       {
@@ -29,5 +30,5 @@
       ]
     }
   },
-  "plugins": ["source-map-support", "transform-flow-strip-types"]
+  "plugins": ["source-map-support"]
 }
