@@ -19,8 +19,8 @@ const greatHouses = async (): Promise<Array<House>> =>
   }));
 
 export const handler = async (event: Object, context: Object, cb: Function) => {
-  // make sure sync / await are working
+  // make sure async / await are working
   const res = await greatHouses();
-  // makes sure pread is working
+  // makes sure spread is working
   cb(null, [...res]);
 };
