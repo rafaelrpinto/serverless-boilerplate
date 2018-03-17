@@ -2,24 +2,35 @@
   "name": "boilerplate-service",
   "version": "1.0.0",
   "description":
-    "Minimal boilerplate for Node.js serverless functions using Babel, Flow, Webpack 4, Yarn, Serverless Offline and AirBNB linting.",
+    "Starter boilerplate for Node.js serverless functions using Babel, Flow, Jest, Webpack 4, Yarn, Serverless Offline and AirBnb linting.",
   "author": "Rafael Pinto (meuemail@posteo.pt)",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rafaelrpinto/serverless-boilerplate.git"
   },
-  "keywords": ["serverless", "nodejs", "webpack", "babel", "aws-lambda"],
+  "keywords": ["serverless", "nodejs", "webpack", "babel", "aws-lambda", "jest", "flow"],
   "scripts": {
     "start": "rm -rf .webpack && serverless offline start",
+    "test": "jest",
     "deploy":
       "rm -rf .webpack && NODE_ENV=production && serverless deploy --aws-profile $AWS_PROFILE --region $AWS_REGION",
     "remove":
       "rm -rf .webpack && NODE_ENV=production && serverless remove --aws-profile $AWS_PROFILE --region $AWS_REGION"
   },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    }
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.0.4",
     "babel-loader": "^7.1.4",
     "babel-plugin-source-map-support": "^2.0.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
@@ -31,6 +42,7 @@
     "eslint-plugin-import": "^2.9.0",
     "flow-bin": "^0.68.0",
     "flow-typed": "^2.4.0",
+    "jest": "^22.4.2",
     "serverless": "^1.26.1",
     "serverless-offline": "^3.18.0",
     "serverless-webpack": "5.1.0",
