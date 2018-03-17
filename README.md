@@ -8,6 +8,7 @@ Starter boilerplate for Node.js serverless functions with:
 * Babel + Babel Minify + ENV target Node 6.10 (This reduces the bundle size)
 * Source maps support
 * Flow
+* Jest
 * Webpack 4
 * Serverless Offline for local execution
 * AirBnb linting
