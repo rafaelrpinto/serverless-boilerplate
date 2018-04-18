@@ -4,6 +4,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: dev
+  memorySize: 128
 
 functions:
   houses:
@@ -12,7 +13,6 @@ functions:
       - http:
           method: get
           path: houses
-          integration: lambda
           cors: true
 
 plugins:
@@ -22,4 +22,6 @@ plugins:
 custom:
   webpack:
     webpackConfig: webpack.config.js
-    includeModules: true
+    includeModules:
+      forceExclude:
+        - aws-sdk

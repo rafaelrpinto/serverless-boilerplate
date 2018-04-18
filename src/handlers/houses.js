@@ -18,11 +18,16 @@ const greatHouses = async (): Promise<Array<House>> =>
     kingdom: pair[1],
   }));
 
-export const handler = async (event: Object, context: Object, cb: Function) => {
+export const handler = async (event: Object, context: Object) => {
+  // freeze containers on return to reuse resources
+  context.callbackWaitsForEmptyEventLoop = false; // eslint-disable-line
   // make sure async / await are working
   const res = await greatHouses();
   // makes sure source maps are working
   console.error(new Error('The error log shoud point to line #25')); // eslint-disable-line
   // makes sure spread is working
-  cb(null, [...res]);
+  return {
+    statusCode: 200,
+    body: JSON.stringify([...res]),
+  };
 };
